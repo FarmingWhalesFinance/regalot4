@@ -25,11 +25,7 @@ function ConsentModal({ hasConsented, setConsented }) {
     return () => clearTimeout(timer);
   }, [hasConsented]);
 
-  return (
-    <div className={`ConsentModal ${visible ? "invisible" : ""}`}>
-      
-    </div>
-  );
+  return <div className={`ConsentModal ${visible ? "invisible" : ""}`}></div>;
 }
 
 export default ConsentModal;

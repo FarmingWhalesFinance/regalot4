@@ -119,7 +119,7 @@ import PageNotFound from "./views/PageNotFound/PageNotFound";
 import useSWR from "swr";
 import LinkDropdown from "./components/Navigation/LinkDropdown/LinkDropdown";
 import Sidebar from "./components/Navigation/Sidebar/Sidebar";
-import EventModal from "./components/EventModal/EventModal";
+//import EventModal from "./components/EventModal/EventModal";
 import AppDropdown from "./components/AppDropdown/AppDropdown";
 import { useInfoTokens } from "./hooks/useInfoTokens";
 // import { Banner, BannerContent } from "./components/Banner/Banner";
@@ -209,11 +209,11 @@ function AppHeaderLinks({ small, openSettings, clickCloseIcon, trackAction }) {
           </Link>
         </div>
       )}
-      <div className="App-header-link-container">
+      {/* <div className="App-header-link-container">
         <NavLink exact activeClassName="active" to="/dashboard">
           Dashboard
         </NavLink>
-      </div>
+      </div> */}
       <div className="App-header-link-container">
         <NavLink exact activeClassName="active" to="/earn">
           Earn
@@ -450,7 +450,7 @@ function FullApp() {
   };
 
   const [walletModalVisible, setWalletModalVisible] = useState();
-  const [isEventModalVisible, setEventModalVisible] = useState(false);
+  //const [isEventModalVisible, setEventModalVisible] = useState(false);
   const connectWallet = () => setWalletModalVisible(true);
 
   const [isDrawerVisible, setIsDrawerVisible] = useState(undefined);
@@ -885,9 +885,9 @@ function FullApp() {
                 sidebarVisible={sidebarVisible}
               />
             </Route>
-            <Route exact path="/dashboard">
+            {/*  <Route exact path="/dashboard">
               <Dashboard />
-            </Route>
+            </Route> */}
             <Route exact path="/earn">
               <Stake
                 setPendingTxns={setPendingTxns}
@@ -986,13 +986,13 @@ function FullApp() {
         draggable={false}
         pauseOnHover
       />
-      <EventModal
+      {/*   <EventModal
         isModalVisible={isEventModalVisible}
         setEventModalVisible={setEventModalVisible}
         eventKey={"referrals-comp"}
         twitterButtonText={"Share your code for a chance to win"}
         twitterText={`🍄🍄🍄 @mycelium_xyz IYKYK\n\nUse my code for a discount: [insert code]\nhttps://swaps.mycelium.xyz/referrals`}
-      />
+      /> */}
       <EventToastContainer />
       <Modal
         className="Connect-wallet-modal"

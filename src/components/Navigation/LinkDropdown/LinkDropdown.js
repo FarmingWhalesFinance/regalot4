@@ -28,7 +28,6 @@ const navLinks = [
   */
 ];
 
-
 export default function LinkDropdown() {
   const location = useLocation();
   const [isOpen, setIsOpen] = useState(false);
@@ -57,34 +56,15 @@ export default function LinkDropdown() {
 
   return (
     <DropdownContainer ref={containerRef}>
-      <DropdownButton onClick={handleToggle}>
+      {/*   <DropdownButton onClick={handleToggle}>
         {currentItem} <img src={chevronDown} alt="Close" />
-      </DropdownButton>
+      </DropdownButton> */}
       <LinkMenu open={isOpen}>
         {navLinks.map((item) => (
           <MenuItem key={item.name} onClick={handleLinkClick} path={item.path}>
             {item.name}
           </MenuItem>
         ))}
-        <ListItem>
-          <a href="https://stake.mycelium.xyz" target="_blank" rel="noopener noreferrer">
-            MYC Staking
-          </a>
-        </ListItem>
-        <ListItem>
-          <a href="https://analytics.mycelium.xyz" target="_blank" rel="noopener noreferrer">
-            Analytics
-          </a>
-        </ListItem>
-        <ListItem>
-          <a
-            href="https://arbitrex.gitbook.io/arbitrex/arbitrex/about-arbitrex"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Docs
-          </a>
-        </ListItem>
       </LinkMenu>
     </DropdownContainer>
   );

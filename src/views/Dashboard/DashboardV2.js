@@ -443,7 +443,8 @@ export default function DashboardV2() {
         <div className="section-title-block">
           <div className="section-title-content">
             <div className="Page-title">
-              Stats {(chainId === ARBITRUM || chainId === ARBITRUM_GOERLI) && (
+              Stats{" "}
+              {(chainId === ARBITRUM || chainId === ARBITRUM_GOERLI) && (
                 <img src={arbitrum24Icon} alt="arbitrum24Icon" />
               )}
             </div>
@@ -498,9 +499,7 @@ export default function DashboardV2() {
                 {feeHistory.length ? (
                   <div className="App-card-row">
                     <div className="label">Fees since {formatDate(feeHistory[0].to)}</div>
-                    <div>
-                      ${formatAmount(totalCurrentFees, USD_DECIMALS, 2, true)}
-                    </div>
+                    <div>${formatAmount(totalCurrentFees, USD_DECIMALS, 2, true)}</div>
                   </div>
                 ) : null}
               </div>
@@ -677,7 +676,7 @@ export default function DashboardV2() {
                     )}
                   </div>
                 </div>
-                <div className="Button-container">
+                {/*   <div className="Button-container">
                   <div className="Staking-btn">
                     <a href="https://stake.mycelium.xyz" target="_blank" rel="noopener noreferrer">
                       <button className="App-button-option App-card-option">MYC Staking</button>
@@ -692,7 +691,7 @@ export default function DashboardV2() {
                       <button className="App-button-option App-card-option">Buy MYC</button>
                     </a>
                   </div>
-                </div>
+                </div> */}
               </div>
               <div className="App-card">
                 <div className="stats-block">

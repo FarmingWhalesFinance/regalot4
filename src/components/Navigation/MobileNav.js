@@ -29,7 +29,7 @@ const navLinks = [
     name: "Trade",
     path: "/",
   },
- 
+
   {
     name: "Earn",
     path: "/earn",
@@ -98,7 +98,7 @@ export default function AppHeaderLinks({
               <img src={navClose} className="close-icon" alt="Close icon" />
             </HeaderClose>
           </Header>
-          <a
+          {/*  <a
             href="https://pools.mycelium.xyz"
             rel="noopener noreferrer"
             target="_blank"
@@ -108,7 +108,7 @@ export default function AppHeaderLinks({
             <SwitchButton className="default-btn switch-link">
               Switch to <img src={poolsSmallImg} alt="Perpetual Pools" />
             </SwitchButton>
-          </a>
+          </a> */}
           <FlexContainer>
             <AccountDropdownContainer>
               {active ? (
@@ -156,16 +156,7 @@ export default function AppHeaderLinks({
               </NavLink>
             </AppHeaderLinkContainer>
           ))}
-          <AppHeaderLinkContainer>
-            <a href="https://stake.mycelium.xyz" target="_blank" rel="noopener noreferrer">
-              MYC Staking
-            </a>
-          </AppHeaderLinkContainer>
-          <AppHeaderLinkContainer>
-            <a href="https://analytics.mycelium.xyz" target="_blank" rel="noopener noreferrer">
-              Analytics
-            </a>
-          </AppHeaderLinkContainer>
+
           <AppHeaderLinkContainer>
             <a
               href="https://arbitrex.gitbook.io/arbitrex/arbitrex/about-arbitrex"
@@ -189,7 +180,7 @@ export default function AppHeaderLinks({
             </a>
           </AppHeaderLinkContainer>
           <MyceliumCopy>
-            © <span ref={yearRef} /> Mycelium
+            © <span ref={yearRef} /> ARBITREX
           </MyceliumCopy>
         </div>
       </ScrollContainer>
