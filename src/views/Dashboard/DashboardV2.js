@@ -273,7 +273,7 @@ export default function DashboardV2() {
                   <br />
                   Get lower fees to{" "}
                   <Link to="/buy_mlp" target="_blank" rel="noopener noreferrer">
-                    buy MLP
+                    buy ARBX
                   </Link>{" "}
                   with {tokenInfo.symbol},&nbsp; and to{" "}
                   <Link to="/" target="_blank" rel="noopener noreferrer">

@@ -30,6 +30,7 @@ const DropdownButton = ({ dropdownOpen, onClick }) => (
     <Styles.MyceliumIcon title="Mycelium icon" />
     <Styles.ChevronDown title="Chevron down" />
     <Styles.DropdownButtonBackground />
+    
   </Styles.DropdownButton>
 );
 

@@ -4,55 +4,20 @@ import Slider, { SliderTooltip } from "rc-slider";
 import "rc-slider/assets/index.css";
 
 
-const LeverageSliderHandle = (props: any) => {
-  const { value, dragging, index, ...restProps } = props;
-  return (
-    <SliderTooltip
-      prefixCls="rc-slider-tooltip"
-      overlay={`${parseFloat(value).toFixed(2)}x`}
-      visible={dragging}
-      placement="top"
-      key={index}
-    >
-      <Slider.Handle value={value} {...restProps} />
-    </SliderTooltip>
-  );
-};
-
-const getMarks = (max: number) => {
-  if (max >= 50) {
-    return ({
-      5: "5x",
-      10: "10x",
-      // 15: "15x",
-      20: "20x",
-      // 25: "25x",
-      30: "30x",
-      // 35: "35x",
-      40: "40x",
-      // 45: "45x",
-      50: "50x",
-    })
-  }
-  return ({
-    2: "2x",
-    5: "5x",
-    10: "10x",
-    15: "15x",
-    20: "20x",
-    25: "25x",
-    30: "30x",
-  })
-}
-
-export const MAX_LEVERAGE_BUFFER = 0.5;
-
-export const getMaxLeverage = (symbol: string) => {
-  if (["WBTC", "WETH", "ETH", "BTC"].includes(symbol)) {
-    return 50 + MAX_LEVERAGE_BUFFER;
-  } // else
-  return 30 + MAX_LEVERAGE_BUFFER;
-}
+const LeverageSliderHandle = (props) => {
+    const { value, dragging, index, ...restProps } = props;
+    return (
+      <SliderTooltip
+        prefixCls="rc-slider-tooltip"
+        overlay={`${parseFloat(value).toFixed(2)}x`}
+        visible={dragging}
+        placement="top"
+        key={index}
+      >
+        <Slider.Handle value={value} {...restProps} />
+      </SliderTooltip>
+    );
+  };
 
 
 export const LeverageInput = ({ value, onChange, max, min, step }) => {
@@ -86,7 +51,15 @@ export const LeverageInput = ({ value, onChange, max, min, step }) => {
           min={min}
           max={max}
           step={step}
-          marks={getMarks(max)}
+          marks={{
+            2: "2x",
+            5: "5x",
+            10: "10x",
+            15: "15x",
+            20: "20x",
+            25: "25x",
+            30: "30x",
+          }}
           handle={LeverageSliderHandle}
           onChange={(value) => onChange(value)}
           value={value}
